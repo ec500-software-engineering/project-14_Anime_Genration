@@ -13,6 +13,16 @@ Please see the [Trello Board](https://trello.com/b/PbjCmHFC/healthapp).
 ```Keras``` to train the model.<br/>
 ```Ngix```,```Django``` to build a web.<br/>
 
+## Large GAN with resnet module<br>
+performs worse than smaller sized model in similar structure.<br>
+
+## WGAN-GP<br>
+Conditional WGAN-GP works for mnist but not anime images.<br>
+Normal WGAN-GP generates unclear anime images.<br>
+![image](https://github.com/WenjieLuo2333/Anime_Generator/blob/master/WGAN-gp/WGAN-gp.png)<br>
+Method to conditional :<br> G_input = multiply(noise,embedding_label)<br> D_input = multiply(flatten image,embedding_label)<br>
+Way too easy,not work for complex images.<br>
+
 ## ACGAN with Resnet<br>
 The result shows that the image at the same location generally has a same color of hair. It shows that ACGAN works to control the output.<br>
 ![image](https://github.com/WenjieLuo2333/Anime_Generator/blob/master/Res_ACGAN_Large/20400.png)
