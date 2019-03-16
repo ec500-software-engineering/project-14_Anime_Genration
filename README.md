@@ -10,4 +10,5 @@ Please see the [Trello Board](https://trello.com/b/PbjCmHFC/healthapp).
 # API used in Sprint1.
 ```numpy```,```pandas``` to handle the data.<br/>
 ```matplotlib``` to visualize data.<br/>
-```sklearn```,```lightgbm``` to fit the model.<br/>
+```Keras``` to train the model.<br/>
+```Ngix```,```Django``` to build a web.<br/>
