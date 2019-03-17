@@ -2,7 +2,7 @@
 Python CI template for EC500 Software Engineering
 
 # User Story And Sprint Definition
-Please see the [Trello Board](https://trello.com/b/PbjCmHFC/healthapp).
+Please see the [Trello Board](https://trello.com/b/PbjCmHFC/healthapp).<br>
 Model Training is almost done.<br>
 Local Web is almost done.<br>
 Thing to be done:<br>
