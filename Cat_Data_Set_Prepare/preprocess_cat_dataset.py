@@ -5,6 +5,7 @@ import cv2
 import glob
 import math
 import sys
+cropPath = 'Your Path to save model'
 
 def rotateCoords(coords, center, angleRadians):
 	# Positive y is down so reverse the angle, too.
