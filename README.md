@@ -3,6 +3,11 @@ Python CI template for EC500 Software Engineering
 
 # User Story And Sprint Definition
 Please see the [Trello Board](https://trello.com/b/PbjCmHFC/healthapp).
+Model Training is almost done.<br>
+Local Web is almost done.<br>
+Thing to be done:<br>
+Convert model into JS style.<br>
+Deploy cloud platform.<br>
 
 # Modularity Definition
 ![Modularity Definition](https://github.com/ec500-software-engineering/project-team14_Anime_Genration/blob/master/Team_14_Anime_GAN.png)
