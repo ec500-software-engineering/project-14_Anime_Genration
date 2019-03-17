@@ -106,8 +106,8 @@ def describePositive():
 			cv2.imwrite(Path2, crop)
 		# Append the cropped face and its bounds to the
 		# positive description.
-		#h, w = crop.shape[:2]
-		#print (cropPath, 1, 0, 0, w, h, file=output)
+		h, w = crop.shape[:2]
+		print (cropPath, 1, 0, 0, w, h, file=output)
 
 
 def main():
