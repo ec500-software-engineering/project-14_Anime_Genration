@@ -1,6 +1,10 @@
 # python-CI-template
 Python CI template for EC500 Software Engineering
 
+# Implemention Proposal
+1. Convert the model into tensor js type and then run the model in viewer's local browser.
+2. Deploy the model in AWS ML agent and give out the result to viewers.
+
 # User Story And Sprint Definition
 Please see the [Trello Board](https://trello.com/b/PbjCmHFC/healthapp).<br>
 Model Training is almost done.<br>
