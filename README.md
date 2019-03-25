@@ -7,7 +7,7 @@ Python CI template for EC500 Software Engineering
 
 # User Story And Sprint Definition
 Please see the [Trello Board](https://trello.com/b/PbjCmHFC/healthapp).<br>
-[!image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/Trello.png)<br>
+![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/Trello.png)<br>
 Model Training is almost done.<br>
 Local Web is almost done.<br>
 Thing to be done:<br>
