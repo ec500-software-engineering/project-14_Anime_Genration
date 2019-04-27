@@ -53,3 +53,5 @@ And for Interpolation it seems that the entries of noise is realated to the feat
 We've made it to generate anime images with controllable features.
 ![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/Conditional_GAN/fake_samples_epoch_048.png)<br>
 ![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/Conditional_GAN/real_samples_epoch_048.png)<br>
+The second picture is the groundtruth images.<br>
+The first picture is geneated with labels of the second picture.<br>
