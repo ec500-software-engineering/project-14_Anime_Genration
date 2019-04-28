@@ -58,4 +58,4 @@ The first picture is geneated with labels of the second picture.<br>
 
 
 ## API for controllable GAN is uploaded<br>
-Simply call the ```load_model``` and ```get_image``` function can generate images.
+Simply call the ```load_model``` and ```get_by_label``` function in ```api_example.py``` can generate images.
