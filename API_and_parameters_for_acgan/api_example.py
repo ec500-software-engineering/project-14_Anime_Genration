@@ -1,8 +1,10 @@
 import shutil
 import numpy as np
 import torch
-from models import *
-import torchvision.utils as vutils
+from models import Generator
+from models import weights_init
+from torch.autograd import Variable
+import matplotlib.pyplot as plt
 
 def save_checkpoint(state, is_best, filename='checkpoint.pth.tar'):
     torch.save(state, filename)
@@ -37,7 +39,7 @@ def get_image(model,target):
     tags = torch.FloatTensor(target).cuda()
     target = np.array(target)
     batch_size = target.shape[0]
-    embedding = nn.Embedding(batch_size,128).cuda()
+    
     max_tag = np.argmax(target,axis = 1)
   
     z = Variable(torch.FloatTensor(batch_size, 128))
@@ -45,7 +47,6 @@ def get_image(model,target):
     z.data.fill_(0.0)
     z.data.normal_(0, 1)
 
-    tag = torch.LongTensor(max_tag).cuda()
     #embed = embedding(tag).view(batch_size,-1).cuda()
     #xx = z.mul(embed)
     factor = edit(max_tag)

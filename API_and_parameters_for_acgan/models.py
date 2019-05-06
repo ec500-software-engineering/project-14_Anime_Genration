@@ -3,10 +3,8 @@
 Implements models in https://arxiv.org/pdf/1708.05509.pdf
 """
 
-import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.autograd import Variable
 
 def swish(x):
     return x * F.sigmoid(x)
@@ -132,7 +130,7 @@ class Generator(nn.Module):
         self.bn1 = nn.BatchNorm2d(64)
         self.relu = nn.ReLU(True)
         
-        self.innerRes1 = residualBlock(in_channels = 64,n = 64);
+        self.innerRes1 = residualBlock(in_channels = 64,n = 64)
 
         for i in range(self.n_residual_blocks):
             self.add_module('residual_block' + str(i+1), residualBlock())
@@ -155,11 +153,8 @@ class Generator(nn.Module):
             y = self.__getattr__('residual_block' + str(i+1))(y)
 
         x = self.relu(self.bn2(y)) + x
-        k = 1
         for i in range(self.upsample_factor//2):
-            # print x.size()
             x = self.__getattr__('upsample' + str(i+1))(x)
-        #x = self.innerRes1(x)
         
 
         return self.tanh(self.conv3(x))
