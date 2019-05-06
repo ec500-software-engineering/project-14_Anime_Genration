@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-from torch.autograd import Variable
 
 from collections import OrderedDict
 import numpy as np
@@ -92,7 +91,7 @@ def summary(model, input_size, batch_size=-1, device="cuda"):
         total_params += summary[layer]["nb_params"]
         total_output += np.prod(summary[layer]["output_shape"])
         if "trainable" in summary[layer]:
-            if summary[layer]["trainable"] == True:
+            if summary[layer]["trainable"] is True:
                 trainable_params += summary[layer]["nb_params"]
         print(line_new)
 

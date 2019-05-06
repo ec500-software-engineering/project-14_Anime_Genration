@@ -3,10 +3,9 @@
 Implements models in https://arxiv.org/pdf/1708.05509.pdf
 """
 
-import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.autograd import Variable
+
 
 def swish(x):
     return x * F.sigmoid(x)
@@ -132,7 +131,7 @@ class Generator(nn.Module):
         self.bn1 = nn.BatchNorm2d(64)
         self.relu = nn.ReLU(True)
         
-        self.innerRes1 = residualBlock(in_channels = 64,n = 64);
+        self.innerRes1 = residualBlock(in_channels = 64,n = 64)
 
         for i in range(self.n_residual_blocks):
             self.add_module('residual_block' + str(i+1), residualBlock())
@@ -155,7 +154,7 @@ class Generator(nn.Module):
             y = self.__getattr__('residual_block' + str(i+1))(y)
 
         x = self.relu(self.bn2(y)) + x
-        k = 1
+        
         for i in range(self.upsample_factor//2):
             # print x.size()
             x = self.__getattr__('upsample' + str(i+1))(x)
@@ -286,16 +285,3 @@ class Discriminator2(nn.Module):
         return self.head1(x1), self.head2(x2) # Use with numerically stable torch.nn.BCEWithLogitsLoss() during training
         # return self.sigmoid(self.head1(x)), self.sigmoid(self.head2(x))
 
-# g = Generator()
-# d = Discriminator()
-# testx = Variable(torch.randn(1,128+12))
-# out = g(testx)
-# print out.size()
-# h1, h2 = d(out)
-# print h1.size()
-# print h2.size()
-
-# x = Variable(torch.randn(1,1,128))
-# y = Variable(torch.randn(1,1,18))
-# z = torch.cat((x, y), 2)
-# print z.size()
