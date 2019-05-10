@@ -5,6 +5,9 @@ Python CI template for EC500 Software Engineering
 1. Convert the model into tensor js type and then run the model in viewer's local browser.
 2. Deploy the model in AWS ML agent and give out the result to viewers.
 
+# Basic Sturcture and 
+The basic theory and structure of our project can be seen from [the ppt](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/EC500_Team_14.ppt)<br>
+
 # User Story And Sprint Definition
 Please see the [Trello Board](https://trello.com/b/PbjCmHFC/healthapp).<br>
 ![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/Trello.png)<br>
@@ -20,8 +23,8 @@ Deploy cloud platform.<br>
 # API used in Sprint1.
 ```numpy```,```pandas``` to handle the data.<br/>
 ```matplotlib``` to visualize data.<br/>
-```Keras``` to train the model.<br/>
-```Ngix```,```Django``` to build a web.<br/>
+```Keras```,```pytorch```to train the model.<br/>
+```ngrok```,```Ngix```,```Django``` to build a web.<br/>
 
 ## Large GAN with resnet module<br>
 performs worse than smaller sized model in similar structure.<br>
@@ -59,3 +62,18 @@ The first picture is geneated with labels of the second picture.<br>
 
 ## API for controllable GAN is uploaded<br>
 Simply call the ```load_model``` and ```get_by_label``` function in ```api_example.py``` can generate images.
+With the API only one line is needed to generate specific images.<br>
+![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/Green.jpg)
+![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/Silver.jpg)
+![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/Red.jpg)
+![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/Blue.jpg)
+
+### FrontEnd Website for Model Demo
+We build a website for users to try our website.<br>
+![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/Make_Anime_Home.png)
+![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/Anime2.png)
+![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/anime3.png)<br>
+And for deploy it to cloud server, we use ngrok to map the port on our local server to a public domain.
+![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/ngrok.png)<br>
+as it shows in picture, we can visit  https://cfdfbf21.ngrok.io/polls (only works when I start the local server to run the model) to visit the website and generate anime images like the following picture.
+![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/result.png)
