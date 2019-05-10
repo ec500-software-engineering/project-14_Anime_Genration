@@ -75,5 +75,5 @@ We build a website for users to try our website.<br>
 ![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/anime3.png)<br>
 And for deploy it to cloud server, we use ngrok to map the port on our local server to a public domain.
 ![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/ngrok.png)<br>
-as it shows in picture, we can visit  https://cfdfbf21.ngrok.io/polls (only works when I start the local server to run the model) to visit the website and generate anime images like the following picture.
+as it shows in picture, we can visit  https://cfdfbf21.ngrok.io/polls (only works when I start the local server to run the model) to visit the website and generate anime images like the following picture.<br>
 ![image](https://github.com/ec500-software-engineering/project-14_Anime_Genration/blob/master/web_demo/result.png)
